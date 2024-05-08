@@ -1,0 +1,15 @@
+footer{
+    width: 100%;
+
+    height: 50rem;
+}
+.seccion_colaboradores{
+    width: 100%;
+    height: 80%;
+    background-color: aliceblue;
+}
+.seccion_politica_de_privacidad{
+    width: 100%;
+    height: 20%;
+    background-color: #242424;
+}
