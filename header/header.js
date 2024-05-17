@@ -1,9 +1,8 @@
-let vinculo = document.querySelector(".root")
+let vinculo_header = document.querySelector(".cabeza")
 
-vinculo.innerHTML=`
+vinculo_header.innerHTML=`
 
-<header>
-<div class="cabeza">
+
     <div class="logo"><img src="https://www.anaitgames.com/wp-content/uploads/2020/11/xbox_logo.png" alt=""></div>
     
     <!-- -----------ENVIOS------- -->
@@ -42,58 +41,22 @@ vinculo.innerHTML=`
     <!-- -------------------------------- -->
 
 
-    <div class="lista_deseos">     
-    <img src="https://cdn-icons-png.freepik.com/512/744/744635.png" alt="">
+    <div class="lista_deseos"> 
+    <img src="./img/lista_deseos_corazon.svg" alt="">
     </div>
 
-    <div class="carrito"></div>
+    <div class="carrito"> <img src="./img/carrito-de-compras.svg" alt="">
+    <div class="suma_articulo0">
+    <div class="suma_articulo1">0</div>
+    <div class="suma_articulo2">Carrito</div>
+
+    </div>
+
+    </div>
 
     </div>
   
-
     <!-- ------------------------------------------- -->
-
-</div>
-
-<!-- Segunda parte del header -->
-
-<div class="cabeza2">
-    <div class="categorias">
-        <img src="" alt="" class="tres_lineas">
-        <span>Todas Las categorias</span>
-    </div>
-
-    <div class="opciones_del_dia">
-        <span>Ofertas</span>
-        <span>Metodos de envio</span>
-        <span>Tarjetas de Regalo</span>
-        <span>Servicio al Cliente</span>
-        <span>mas..</span>
-
-    </div>
-
-
-</div>
-
-</header>
-
-
-
-
-
-
-
-<footer>
-
-
-<div class="seccion_colaboradores">
-
-</div>
-<div class="seccion_politica_de_privacidad">
-    
-</div>
-
-</footer>
 
 
 `
