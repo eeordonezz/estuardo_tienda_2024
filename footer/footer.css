@@ -74,6 +74,7 @@
 .redes_sociales_icons img{
     width: 50%;
     height: 2.5rem;
+    cursor: pointer;
 }
 .icons_apps_footer{
     width: 100%;
@@ -89,4 +90,8 @@
 .links_aplicaciones{
     display: flex;
     gap: 1rem;
+}
+.links_aplicaciones img{
+    cursor: pointer;
+
 }
