@@ -24,7 +24,12 @@ vinculo_header.innerHTML=`
     <!-- -----------barra de busqueda------- -->
   
     <div class="div_busqueda">
-        <input  type="text" placeholder="" class="barra_busqueda"> <div class="icon_busqueda"></div>
+        
+        <input  type="text"placeholder="" class="barra_busqueda">
+        <div class="icon_busqueda"> <img src="./img/lupa-de-busqueda.svg" alt=""> </div>
+        
+        
+
         </div>
 
     <!-- ----------------Mi cuenta---------------- -->
