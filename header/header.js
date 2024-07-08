@@ -38,7 +38,7 @@ vinculo_header.innerHTML=`
     <div class="cuenta_persona">    <img src="https://images.vexels.me/media/users/3/136558/isolated/preview/43cc80b4c098e43a988c535eaba42c53-person-user-icon.png" alt="">   </div>
 
     <div class="micuenta_info">
-        <span class="mi_cuenta1">Hola, Estuardo</span> 
+        <span class="mi_cuenta1">Hola, usuario</span> 
         <span class="mi_cuenta2">Mi cuenta ^ </span>
     </div>
     </div>
