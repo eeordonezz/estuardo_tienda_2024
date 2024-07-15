@@ -188,4 +188,107 @@
 
 }
 
+@media (max-width: 768px) {
+    .productos_categoria {
+        padding: 0rem 2rem; /* Ajuste de padding para tablet */
+        height: auto; /* Altura automática para adaptarse al contenido */
+        grid-template-columns: 25% 65% 10%; /* Ajuste de columnas */
+    }
+
+    .categorias {
+        justify-content: space-around; /* Mantener el espacio alrededor */
+    }
+
+    .btn_categorias {
+        width: 80%; /* Ajuste del ancho del botón */
+        height: 60%; /* Ajuste de la altura del botón */
+    }
+
+    .categorias img {
+        width: 4%; /* Ajuste del tamaño de la imagen */
+        height: 1.2rem; /* Ajuste del tamaño de la imagen */
+    }
+
+    .categorias span {
+        font-size: 1.2rem; /* Tamaño de fuente reducido */
+    }
+
+    .opciones_despegables {
+        width: 20%; /* Ajuste del ancho del desplegable */
+        margin-top: 25rem; /* Ajuste del margen superior */
+        height: 25rem; /* Ajuste de la altura del desplegable */
+    }
+
+    .categorias:hover .opciones_despegables {
+        grid-template-rows: repeat(6, 1fr); /* Ajuste de filas del desplegable */
+    }
+
+    .opciones_del_dia a {
+        font-size: 1.1rem; /* Tamaño de fuente reducido */
+    }
+
+    .mas_categorias {
+        width: 60%; /* Ajuste del ancho del botón */
+        height: 50%; /* Ajuste de la altura del botón */
+    }
+
+    .opciones_despegables_mas {
+        top: 10rem; /* Ajuste del margen superior */
+        height: 8rem; /* Ajuste de la altura del desplegable */
+    }
+
+    .mas_opciones_categorias:hover .opciones_despegables_mas {
+        width: 10%; /* Ajuste del ancho del desplegable */
+    }
+}
+
+@media (max-width: 480px) {
+    .productos_categoria {
+        padding: 0rem 1rem; /* Ajuste de padding para teléfono móvil */
+        grid-template-columns: 30% 60% 10%; /* Ajuste de columnas */
+    }
+
+    .btn_categorias {
+        width: 75%; /* Ajuste del ancho del botón */
+        height: 50%; /* Ajuste de la altura del botón */
+    }
+
+    .categorias img {
+        width: 3%; /* Ajuste del tamaño de la imagen */
+        height: 1rem; /* Ajuste del tamaño de la imagen */
+    }
+
+    .categorias span {
+        font-size: 1rem; /* Tamaño de fuente reducido */
+    }
+
+    .opciones_despegables {
+        width: 25%; /* Ajuste del ancho del desplegable */
+        margin-top: 20rem; /* Ajuste del margen superior */
+        height: 20rem; /* Ajuste de la altura del desplegable */
+    }
+
+    .categorias:hover .opciones_despegables {
+        grid-template-rows: repeat(5, 1fr); /* Ajuste de filas del desplegable */
+    }
+
+    .opciones_del_dia a {
+        font-size: 1rem; /* Tamaño de fuente reducido */
+    }
+
+    .mas_categorias {
+        width: 50%; /* Ajuste del ancho del botón */
+        height: 45%; /* Ajuste de la altura del botón */
+    }
+
+    .opciones_despegables_mas {
+        top: 8rem; /* Ajuste del margen superior */
+        height: 6rem; /* Ajuste de la altura del desplegable */
+    }
+
+    .mas_opciones_categorias:hover .opciones_despegables_mas {
+        width: 12%; /* Ajuste del ancho del desplegable */
+    }
+}
+
 

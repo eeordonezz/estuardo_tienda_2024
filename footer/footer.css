@@ -95,3 +95,24 @@
     cursor: pointer;
 
 }
+
+
+@media (max-width: 480px) {
+    /* Media query solo para teléfonos */
+    .info_footer {
+        height: auto; /* Cambiar a altura automática para teléfonos */
+        grid-template-columns: 1fr; /* Una columna en teléfonos */
+    }
+
+    .informacion_adentro_footer {
+        grid-template-columns: 1fr; /* Una columna en teléfonos */
+    }
+
+    .subtitulos_footer {
+        font-size: 1.2rem; /* Reducir el tamaño de fuente para los subtitulos */
+    }
+
+    .subtitulos_footer img {
+        width: 20px; /* Reducir el tamaño de las imágenes */
+    }
+}

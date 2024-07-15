@@ -20,10 +20,10 @@ vinculo_header2.innerHTML = `
     <div class="opciones_despegables"> 
 
 
-    <a href="#">Ropa de Hombre </a>
-    <a href="#">Joyeria</a>
-    <a href="#">Electronicos</a>
-    <a href="#">Ropa de Mujer</a>
+    <a href="#" id="ropa_hombre" >Ropa de Hombre </a>
+    <a href="#" id="joyeria">Joyeria</a>
+    <a href="#" id="electronicos">Electronicos</a>
+    <a href="#" id="ropa_mujer">Ropa de Mujer</a>
     <a href="#">Ropa de Niño </a>
     <a href="#">Celulares</a>
     <a href="#">Computadoras</a>
