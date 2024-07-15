@@ -1,70 +1,73 @@
-
-header{
-    padding:2rem 3rem 0rem 3rem;
+/* Estilos para header */
+header {
+    padding: 2rem 3rem 0rem 3rem;
     width: 100%;
     height: 10rem;
     color: white;
     background-color: #242424;
     display: grid;
     grid-template-rows: repeat(1, 1fr);
-
 }
-.cabeza{
+
+.cabeza {
     gap: 2rem;
     width: 100%;
     height: 7rem;
     display: grid;
-    grid-template-columns: 10% 10% 50% 12% 6% 5%;
+    grid-template-columns: 10% 10% 45% 12% 6% 10%;
 }
-.logo{
+
+.logo {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
-.logo img{
+
+.logo img {
     width: 50%;
     height: 6rem;
+}
 
+.envios {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    width: 100%;
+    height: 88%;
 }
-.envios{
-display: grid;
-grid-template-columns: 40% 60%;
-width: 100%;
-height: 88%;
-}
-.envio1{
+
+.envio1 {
     display: flex;
-    
     align-items: center;
     width: 100%;
 }
 
-.envio1 img{
+.envio1 img {
     cursor: pointer;
     margin-top: 2.5rem;
     width: 100%;
     height: 50%;
 }
-.envio2{
 
+.envio2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.envio2 span{
+
+.envio2 span {
     cursor: pointer;
     font-size: 1.5rem;
     margin-left: 0.5rem;
 }
-.div_busqueda{
+
+.div_busqueda {
     display: grid;
     grid-template-columns: 90% 10%;
     width: 100%;
     height: 100%;
 }
 
-.barra_busqueda{
+.barra_busqueda {
     outline: none;
     border: none;
     width: 100%;
@@ -72,75 +75,79 @@ height: 88%;
     border-radius: 5rem 0rem 0rem 5rem;
     font-size: 2rem;
     padding: 1rem;
-    
 }
-.icon_busqueda{
-    cursor: pointer;
-        border: none;
 
+.icon_busqueda {
+    cursor: pointer;
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 0rem 5rem 5rem 0rem;
     width: 100%;
     height: 75%;
-    background-color: #434040;   
+    background-color: #434040;
 }
-.icon_busqueda img{
+
+.icon_busqueda img {
     width: 35%;
     height: 2.5rem;
 }
-.mi_cuenta{
-    display: grid;
 
+.mi_cuenta {
+    display: grid;
     grid-template-columns: 40% 60%;
     width: 100%;
     height: 100%;
 }
-.cuenta_persona{
+
+.cuenta_persona {
     display: flex;
     width: 100%;
     height: 100%;
     justify-content: center;
     align-items: center;
 }
-.cuenta_persona img{
+
+.cuenta_persona img {
     width: 70%;
     height: 4.5rem;
 }
-.micuenta_info{
+
+.micuenta_info {
     display: flex;
     display: grid;
-    grid-template-rows: repeat(2,1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
-.mi_cuenta span{
-    
+
+.mi_cuenta span {
     font-size: 1.5rem;
 }
-.mi_cuenta1{
 
+.mi_cuenta1 {
     display: flex;
     align-items: end;
-    white-space:nowrap;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-
 }
-.lista_deseos{
-    
+
+.lista_deseos {
     display: flex;
     width: 100%;
     height: 100%;
     justify-content: center;
     align-items: center;
-
 }
-.lista_deseos img{
+
+.lista_deseos img {
     cursor: pointer;
     width: 40%;
     height: 3rem;
 }
-.carrito{
+
+.carrito {
+    position: relative;
     display: grid;
     grid-template-columns: 40% 60%;
     gap: 0.5rem;
@@ -148,32 +155,248 @@ height: 88%;
     height: 100%;
     justify-content: center;
     align-items: center;
+}
 
-}
-.suma_articulo0{
-    gap: 1rem;
-    display: grid;
-    grid-template-rows: repeat(2,1fr);
-}
-.suma_articulo1{
-    display: flex;
-    color: black;
-    justify-content: center;
-    font-size: 1.1rem;
-    font-weight: 600;
-    width: 3.1rem;
-    height: 1.2rem;
-    border-radius: 1rem;
-    background-color: white;
-    
-
-}
-.suma_articulo2{
-    font-weight: 600;
-    font-size: 1.1rem;
-}
-.carrito img{
+.carrito img {
     cursor: pointer;
-    width: 100%;
+    width: 50%;
     height: 3rem;
+}
+
+/* Dropdown del carrito */
+.carrito-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.carrito-dropdown .cart-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.carrito-dropdown .cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.carrito-dropdown .cart-item .item-info {
+    flex-grow: 1;
+}
+
+.carrito-dropdown .cart-item .item-name {
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.carrito-dropdown .cart-item .item-price {
+    color: #0f7704;
+    font-size: 1.3rem;
+}
+
+.carrito-dropdown .cart-item .remove-from-cart {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.carrito-dropdown .cart-item .remove-from-cart:hover {
+    background: darkred;
+}
+
+/* Contenedor y formulario de inicio de sesión */
+.login-form-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.login-form {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    max-width: 90%;
+    text-align: center;
+}
+
+.login-form h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.login-form button {
+    background-color: #242424;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #434040;
+}
+
+.login-form button:focus {
+    outline: none;
+}
+
+.login-form .form-link {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #666;
+}
+
+.login-form .form-link a {
+    color: #242424;
+    text-decoration: none;
+}
+
+.login-form .form-link a:hover {
+    text-decoration: underline;
+}
+
+/* Enlace "Iniciar sesión" */
+#open-login {
+    text-decoration: none;
+    color: white;
+    background-color: #3c2749;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+#open-login:hover {
+    background-color: #333d47;
+}
+
+@media only screen and (max-width: 1024px) {
+    .cabeza {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+        gap: 1rem;
+        padding: 1rem;
+        height: auto;
+    }
+
+    .envios,
+    .lista_deseos {
+        display: none; /* Ocultar envíos y lista de deseos */
+    }
+
+    .mi_cuenta {
+        grid-column: span 2; /* Ocupar dos columnas */
+        justify-content: flex-end;
+    }
+
+    .logo img {
+        max-width: 100%; /* Ajustar tamaño máximo del logo */
+        height: auto;
+    }
+
+    .icon_busqueda img {
+        max-width: 100%; /* Ajustar tamaño máximo del icono de búsqueda */
+        height: auto;
+    }
+
+    .cuenta_persona img {
+        max-width: 100%; /* Ajustar tamaño máximo de la imagen de la cuenta */
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .cabeza {
+        grid-template-columns: repeat(3, 1fr); /* Dos columnas */
+        gap: 1rem;
+        padding: 1rem;
+        height: auto;
+    }
+    .div_busqueda{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .barra_busqueda{
+        width: 90%;
+        height: 2rem;
+        font-size: 0.8rem;
+       
+    }
+    .icon_busqueda{
+        width: 10%;
+        height: 2rem;
+    }
+
+    .envios,
+    .lista_deseos {
+        display: none; /* Ocultar envíos y lista de deseos */
+    }
+
+    .mi_cuenta {
+        grid-column: span 1; /* Ocupar una columna */
+        justify-content: flex-end;
+    }
+
+    .logo img {
+        max-width: 100%; /* Ajustar tamaño máximo del logo */
+        height: auto;
+    }
+
+    .icon_busqueda img {
+        max-width: 100%; /* Ajustar tamaño máximo del icono de búsqueda */
+        height: auto;
+    }
+
+    .cuenta_persona img {
+        max-width: 100%; /* Ajustar tamaño máximo de la imagen de la cuenta */
+        height: auto;
+    }
+
 }

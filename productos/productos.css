@@ -56,21 +56,21 @@
 }
 
 .product .description {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     color: #666;
     margin-bottom: 10px;
 }
 
 .product .price {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    color: #007bff;
+    color: #13a242;
     margin-bottom: 10px;
 }
 
 .product .add-to-cart {
     padding: 8px 16px;
-    background-color: #007bff;
+    background-color: #010f1e;
     color: white;
     border: none;
     border-radius: 5px;
@@ -79,7 +79,7 @@
 }
 
 .product .add-to-cart:hover {
-    background-color: #0056b3;
+    background-color: #6f7479;
 }
 
 /* Media queries para tamaños de pantalla específicos */
