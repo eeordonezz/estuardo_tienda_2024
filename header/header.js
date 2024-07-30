@@ -65,6 +65,7 @@ openLogin.addEventListener('click', function(event) {
 // Escuchar el envío del formulario de login
 const form = document.getElementById('login-form');
 
+// Escuchar el envío del formulario de login
 form.addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -85,6 +86,9 @@ form.addEventListener('submit', function(event) {
 
                 // Cerrar el formulario de login
                 loginFormContainer.style.display = 'none';
+
+                // Cargar productos del carrito del usuario
+                cargarProductosAlCarrito(user.id);
             } else {
                 alert('Correo electrónico o contraseña incorrectos. Por favor, inténtalo de nuevo.');
             }
@@ -94,9 +98,47 @@ form.addEventListener('submit', function(event) {
         });
 });
 
-// Cerrar el formulario de login al hacer clic fuera de él (en el área transparente)
-loginFormContainer.addEventListener('click', function(event) {
-    if (event.target === loginFormContainer) {
-        loginFormContainer.style.display = 'none';
-    }
-});
+// Función para cargar productos al carrito
+function cargarProductosAlCarrito(userId) {
+    fetch(`https://fakestoreapi.com/carts/user/${userId}`)
+        .then(response => response.json())
+        .then(cart => {
+            // Obtener el contenedor del carrito
+            const carritoDropdown = document.getElementById('carrito-dropdown');
+            
+            // Limpiar el contenido actual del carrito
+            carritoDropdown.innerHTML = '';
+
+            // Verificar si el carrito contiene productos
+            if (cart.length > 0) {
+                const productos = cart[0].products;
+                // Obtener detalles de cada producto
+                productos.forEach(product => {
+                    fetch(`https://fakestoreapi.com/products/${product.productId}`)
+                        .then(response => response.json())
+                        .then(productDetails => {
+                            // Crear elemento para cada producto en el carrito
+                            const productElement = document.createElement('div');
+                            productElement.classList.add('carrito-item');
+                            productElement.innerHTML = `
+                                <img src="${productDetails.image}" alt="${productDetails.title}">
+                                <div class="carrito-item-info">
+                                    <span>${productDetails.title}</span>
+                                    <span>Precio: $${productDetails.price}</span>
+                                    <span>Cantidad: ${product.quantity}</span>
+                                </div>
+                            `;
+                            carritoDropdown.appendChild(productElement);
+                        })
+                        .catch(error => {
+                            console.error('Error al obtener detalles del producto:', error);
+                        });
+                });
+            } else {
+                carritoDropdown.innerHTML = '<p>El carrito está vacío.</p>';
+            }
+        })
+        .catch(error => {
+            console.error('Error al obtener el carrito del usuario:', error);
+        });
+}
